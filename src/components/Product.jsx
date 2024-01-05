@@ -8,4 +8,7 @@ export const Product = ({ name, price }) => {
             <button className='border-solid border-2 border-white bg-amber-300 text-black'>Add to Cart</button>
         </div>
     )
+    function addToCart() {
+
+    }
 }

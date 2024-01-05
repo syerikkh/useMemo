@@ -21,7 +21,7 @@ export const ShoppingCart = () => {
                     )
                 })}
             </div>
-            <div className='mr-[500px] '>
+            <div className='mr-[700px] w-[400px] p-10 rounded-md'>
                 <h1>Shopping cart</h1>
                 <li></li>
             </div>
