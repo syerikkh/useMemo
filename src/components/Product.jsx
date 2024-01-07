@@ -1,14 +1,12 @@
 import React from 'react'
 
-export const Product = ({ name, price }) => {
+export const Product = ({ id, name, price, addCart }) => {
+
     return (
-        <div>
-            <h1>Name: {name}</h1>
-            <h1>Price: {price}</h1>
-            <button className='border-solid border-2 border-white bg-amber-300 text-black'>Add to Cart</button>
+        <div className='border-solid border-2 border-indigo-600 p-2 w-[330px] gap-2'>
+            <h1 className='font-semibold text-gray-600'>Name : {name}</h1>
+            <p className='font-bold'>${price}</p>
+            <button onClick={addCart} className='bg-black text-white p-2 rounded-md'>Add to Cart</button>
         </div>
     )
-    function addToCart() {
-
-    }
 }

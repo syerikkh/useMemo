@@ -1,15 +1,17 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import { Product } from '@/components/Product'
+
 import { ShoppingCart } from '@/components/ShoppingCart'
+import { Inter } from 'next/font/google'
+
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
     <div>
-      <Product />
+      Products:
+
       <ShoppingCart />
     </div>
+
   )
 }
