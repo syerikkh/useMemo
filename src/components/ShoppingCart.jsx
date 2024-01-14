@@ -3,7 +3,7 @@ import { Product } from './Product'
 import { CartContext } from '@/context/CartCont';
 
 export const ShoppingCart = () => {
-    const { cart, addToCart } = useContext(CartContext);
+    const { cart, totalPrice } = useContext(CartContext);
     const [data, setData] = useState([]);
     const fetchData = async () => {
         const res = await fetch('/product.json')
@@ -28,9 +28,17 @@ export const ShoppingCart = () => {
                 ))}
             </div>
             <div>
-                Shopping Cart
+                <h1 className='font-bold text-2xl mb-5'>Shopping Cart</h1>
+                {cart.map((item) => {
+                    return (
+                        <li>
+                            {item.name} - {item.price}$
+                        </li>
+                    )
 
+                })}
+                <h1 className='font-semibold mt-5'>Total Price: {totalPrice}$</h1>
             </div>
-        </div>
+        </div >
     )
 }
